@@ -68,7 +68,7 @@ bool solveSudoku()
     int row, col;
     if (!findEmpty(row, col))
         return true;                     //when all places are filled
-    for (int num = 1; num <= 9; num++) { //valid numbers are 1 - 9
+    for (int num = 1; num <= 9; num++) { 
         if (isValid(row, col, num)) {    //if validplace,we continue
             grid[row][col] = num;
             if (solveSudoku())           //recursively checking for other spaces
